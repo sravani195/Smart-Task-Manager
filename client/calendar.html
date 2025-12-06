@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar - Smart Task Manager</title>
+  <link rel="stylesheet" href="/assets/css/calendar-style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <h2>Calendar</h2>
+  </header>
+
+  <!-- Calendar Container -->
+  <main class="calendar-container">
+    <div class="calendar-header">
+      <span id="prevMonth" class="material-icons nav-icon">chevron_left</span>
+      <h3 id="monthYear"></h3>
+      <span id="nextMonth" class="material-icons nav-icon">chevron_right</span>
+    </div>
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th>
+          <th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody id="calendarBody"></tbody>
+    </table>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-bar">
+    <button onclick="window.location.href='/dashboard.html'" class="nav-btn">
+      <span class="material-icons">list</span><br>Tasks
+    </button>
+    <button onclick="window.location.href='/calendar.html'" class="nav-btn active">
+      <span class="material-icons">calendar_month</span><br>Calendar
+    </button>
+    <button onclick="window.location.href='/overview.html'" class="nav-btn">
+      <span class="material-icons">person</span><br>Profile
+    </button>
+  </nav>
+
+  <script src="/assets/js/calendar.js"></script>
+</body>
+</html>

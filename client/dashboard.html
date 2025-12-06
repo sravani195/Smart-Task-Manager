@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Smart Task Manager</title>
+  <link rel="stylesheet" href="/assets/css/dashboard-style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="top-bar">
+    <h2>Smart Task Manager</h2>
+  </header>
+
+  <!-- Category tabs -->
+  <div class="category-bar">
+    <button class="tab active" data-category="All">All</button>
+    <button class="tab" data-category="Work">Work</button>
+    <button class="tab" data-category="Personal">Personal</button>
+    <button class="tab" data-category="Wishlist">Wishlist</button>
+    <button class="tab" data-category="Birthdays">Birthdays</button>
+  </div>
+
+  <!-- Main Task Section -->
+  <main id="task-section">
+    <h3 id="category-title">All Tasks</h3>
+    <ul id="task-list"></ul>
+  </main>
+
+  <!-- Floating Add Button -->
+  <button id="add-task-btn" class="fab">+</button>
+
+  <!-- Add Task Modal -->
+  <div id="add-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Add New Task</h3>
+        <span class="close-btn" id="closeModal">&times;</span>
+      </div>
+      <form id="addTaskForm">
+        <div class="form-group">
+          <label for="taskTitle">Task Title</label>
+          <input type="text" id="taskTitle" placeholder="Enter task title" required>
+        </div>
+        <div class="form-group">
+          <label for="taskCategory">Category</label>
+          <select id="taskCategory" required>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Wishlist">Wishlist</option>
+            <option value="Birthdays">Birthdays</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="taskDate">Due Date</label>
+          <input type="date" id="taskDate" required>
+        </div>
+        <div class="form-group">
+          <label for="taskNotes">Notes</label>
+          <textarea id="taskNotes" placeholder="Add task notes..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn-save">Save Task</button>
+          <button type="button" class="btn-cancel" id="closeModalFooter">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-bar">
+    <button id="nav-tasks" class="nav-btn active">
+      <span class="material-icons">list</span><br>Tasks
+    </button>
+    <button id="nav-calendar" class="nav-btn">
+      <span class="material-icons">calendar_month</span><br>Calendar
+    </button>
+    <button id="nav-profile" class="nav-btn">
+      <span class="material-icons">person</span><br>Profile
+    </button>
+  </nav>
+
+  <script src="/assets/js/dashboard.js"></script>
+</body>
+</html>
